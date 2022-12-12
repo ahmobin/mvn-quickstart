@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.entities.Student;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
@@ -13,7 +15,15 @@ public class App
     {
         System.out.println( "Hello World!" );
         SessionFactory factory = new Configuration().configure().buildSessionFactory();
-        System.out.println(factory);
-        System.out.println(factory.isClosed());
+
+        //creating new student
+        Student student1 = new Student(1, "Abu Horaira", "Dhaka");
+        Session session = factory.openSession();
+        session.beginTransaction();
+
+        session.save(student1);
+        session.getTransaction().commit();
+
+        session.close();
     }
 }
