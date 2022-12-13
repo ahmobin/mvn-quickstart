@@ -1,6 +1,7 @@
 package org.example.entities;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="students")
@@ -14,16 +15,20 @@ public class Student {
 
     private Certificate certificate;
 
+    @OneToMany
+    private List<Degree> degrees;
+
 
     public Student() {
         super();
     }
 
-    public Student(int id, String name, String city) {
-        super();
+    public Student(int id, String name, String city, Certificate certificate, List<Degree> degrees) {
         this.id = id;
         this.name = name;
         this.city = city;
+        this.certificate = certificate;
+        this.degrees = degrees;
     }
 
     public int getId() {
@@ -58,12 +63,22 @@ public class Student {
         this.certificate = certificate;
     }
 
+    public List<Degree> getDegrees() {
+        return degrees;
+    }
+
+    public void setDegrees(List<Degree> degrees) {
+        this.degrees = degrees;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", city='" + city + '\'' +
+                ", certificate=" + certificate +
+                ", degrees=" + degrees +
                 '}';
     }
 }

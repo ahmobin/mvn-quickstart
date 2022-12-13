@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.entities.Address;
+import org.example.entities.Degree;
 import org.example.entities.Student;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -22,7 +23,9 @@ public class App
         SessionFactory factory = new Configuration().configure().buildSessionFactory();
 
         //creating new student
-        Student student1 = new Student(1, "Abu Horaira", "Dhaka");
+        Student student1 = new Student();
+        student1.setName("Mobin");
+        student1.setCity("Dhaka");
         Address address1 = new Address();
         address1.setStreet("street name");
         address1.setCity("city name");
