@@ -42,5 +42,6 @@ public class App
         session.getTransaction().commit();
 
         session.close();
+        factory.close();
     }
 }

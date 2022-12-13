@@ -12,6 +12,9 @@ public class Student {
     private String name;
     private String city;
 
+    private Certificate certificate;
+
+
     public Student() {
         super();
     }
@@ -45,6 +48,14 @@ public class Student {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public Certificate getCertificate() {
+        return certificate;
+    }
+
+    public void setCertificate(Certificate certificate) {
+        this.certificate = certificate;
     }
 
     @Override

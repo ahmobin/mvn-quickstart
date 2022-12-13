@@ -34,7 +34,7 @@ public class FetchData {
         System.out.println(address.getCity());
         System.out.println(addressNotInDb);
 
-        factory.close();
         session.close();
+        factory.close();
     }
 }
