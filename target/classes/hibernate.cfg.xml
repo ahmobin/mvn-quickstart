@@ -17,5 +17,7 @@
         <mapping class="org.example.entities.Question"></mapping>
         <mapping class="org.example.entities.Answer"></mapping>
         <mapping class="org.example.entities.Degree"></mapping>
+        <mapping class="org.example.entities.Employee"></mapping>
+        <mapping class="org.example.entities.Project"></mapping>
     </session-factory>
 </hibernate-configuration>
