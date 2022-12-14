@@ -22,7 +22,6 @@ public class OneToManyToOne {
         Student newStudent = new Student();
         newStudent.setName("Abu Horaira Mobin");
         newStudent.setCity("Dhaka");
-        newStudent.setCity("Dhaka");
         newStudent.setCertificate(certificate);
 
         Degree degree1 = new Degree();

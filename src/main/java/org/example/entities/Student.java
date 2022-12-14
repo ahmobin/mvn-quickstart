@@ -15,7 +15,7 @@ public class Student {
 
     private Certificate certificate;
 
-    @OneToMany
+    @OneToMany(mappedBy = "student")
     private List<Degree> degrees;
 
 
