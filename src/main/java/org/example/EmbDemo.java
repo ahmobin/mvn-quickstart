@@ -10,8 +10,7 @@ public class EmbDemo {
 
     public static void main(String[] args) {
 
-        SessionFactory factory = new Configuration().configure().buildSessionFactory();
-        Session session = factory.openSession();
+        Session session = FactoryProvider.getFactory().openSession();
 
         Certificate certificate = new Certificate();
         certificate.setCourse("Hibernate");
@@ -29,7 +28,7 @@ public class EmbDemo {
         session.getTransaction().commit();
 
         session.close();
-        factory.close();
+        FactoryProvider.closeFactory();
 
     }
 }
